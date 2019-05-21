@@ -1,0 +1,21 @@
+apply from: "$rootDir/common.gradle"
+
+dependencies {
+    //rx
+    implementation Reactivex.android
+    implementation Reactivex.kotlin
+
+    //android support
+    implementation AndroidX.appCompat
+    implementation AndroidX.androidCore
+    implementation AndroidX.constraint
+    implementation AndroidX.recyclerView
+
+    //glide
+    implementation Glide.glide
+    kapt Glide.compiler
+
+    //testing
+    testImplementation Testing.jUnit
+    implementation project(Modules.uicomponent)
+}
